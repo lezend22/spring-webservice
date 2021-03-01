@@ -27,7 +27,7 @@ public class Posts extends BaseTimeEntity {
 
     private String author;
 
-    //build()형식의 인스턴스 생성가능, 파라미터가 많을때 사용
+    //생성자, build()형식의 인스턴스 생성가능, 파라미터가 많을때 사용
     @Builder
     public Posts(String title, String content, String author) {
         this.title = title;
