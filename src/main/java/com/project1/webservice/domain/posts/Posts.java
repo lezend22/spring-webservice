@@ -20,18 +20,18 @@ public class Posts extends BaseTimeEntity {
 
     //column은 굳이 안써도됨 다만,기본값을 변경하고싶을때 사용
     @Column(length = 500, nullable = false)
-    private String title;
+    private String product;
 
     @Column(columnDefinition = "TEXT", nullable = false)
-    private  String content;
+    private  String price;
 
-    private String author;
+    private String customerName;
 
     //생성자, build()형식의 인스턴스 생성가능, 파라미터가 많을때 사용
     @Builder
-    public Posts(String title, String content, String author) {
-        this.title = title;
-        this.content = content;
-        this.author = author;
+    public Posts(String product, String price, String customerName) {
+        this.product = product;
+        this.price = price;
+        this.customerName = customerName;
     }
 }

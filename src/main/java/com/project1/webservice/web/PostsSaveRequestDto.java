@@ -13,18 +13,18 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PostsSaveRequestDto {
 
-    private String title;
-    private String content;
-    private String author;
+    private String product;
+    private String price;
+    private String customerName;
 
     public Posts toEntity(){
-        return Posts.builder().title(title).content(content).author(author).build();
+        return Posts.builder().product(product).price(price).customerName(customerName).build();
     }
 
     @Builder
-    public PostsSaveRequestDto(String title, String content, String author) {
-        this.title = title;
-        this.content = content;
-        this.author = author;
+    public PostsSaveRequestDto(String product, String price, String customerName) {
+        this.product = product;
+        this.price = price;
+        this.customerName = customerName;
     }
 }
