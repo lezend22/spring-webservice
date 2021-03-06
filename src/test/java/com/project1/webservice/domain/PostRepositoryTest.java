@@ -26,7 +26,7 @@ public class PostRepositoryTest {
     @Test
     @DisplayName("저장된 게시물 확인")
     public void jpaRepoTest() {
-        postsRepository.save(Posts.builder().product("제목").price("본문").customerName("작성자").build());
+        postsRepository.save(Posts.builder().product("제목").price("본문").name("작성자").build());
 
         List<Posts> postsList = postsRepository.findAll();
         Posts posts = postsList.get(0);
@@ -46,7 +46,7 @@ public class PostRepositoryTest {
         postsRepository.save(Posts.builder()
                 .product("test1")
                 .price("10000")
-                .customerName("광광맨")
+                .name("광광맨")
                 .build());
 
         List<Posts> postsList = postsRepository.findAll();

@@ -25,13 +25,13 @@ public class Posts extends BaseTimeEntity {
     @Column(columnDefinition = "TEXT", nullable = false)
     private  String price;
 
-    private String customerName;
+    private String name;
 
     //생성자, build()형식의 인스턴스 생성가능, 파라미터가 많을때 사용
     @Builder
-    public Posts(String product, String price, String customerName) {
+    public Posts(String product, String price, String name) {
         this.product = product;
         this.price = price;
-        this.customerName = customerName;
+        this.name = name;
     }
 }

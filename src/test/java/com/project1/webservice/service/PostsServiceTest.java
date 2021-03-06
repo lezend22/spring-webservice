@@ -30,7 +30,7 @@ public class PostsServiceTest {
     @DisplayName("서비스 로직 반환값확인")
     void serviceLogicTest() {
 
-        PostsSaveRequestDto dto = PostsSaveRequestDto.builder().product("test1").price("10000").customerName("tony").build();
+        PostsSaveRequestDto dto = PostsSaveRequestDto.builder().product("test1").price("10000").name("tony").build();
 
         postsService.save(dto);
 
@@ -45,7 +45,7 @@ public class PostsServiceTest {
     @DisplayName("findByName에따른 API반환 확인")
     void serviceApiReturn(){
 
-        PostsSaveRequestDto dto = PostsSaveRequestDto.builder().product("코코볼바").price("10000").customerName("tony").build();
+        PostsSaveRequestDto dto = PostsSaveRequestDto.builder().product("코코볼바").price("10000").name("tony").build();
         postsService.save(dto);
 
         Posts post = postsService.findOrder("tony").get();

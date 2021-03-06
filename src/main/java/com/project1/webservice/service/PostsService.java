@@ -21,9 +21,9 @@ public class PostsService {
         postsRepository.save(dto.toEntity());
     }
 
-    public Optional<Posts> findOrder(String customerName){
+    public Optional<Posts> findOrder(String name){
 
-        Optional<Posts> post = postsRepository.findByName(customerName);
+        Optional<Posts> post = postsRepository.findByName(name);
         return post;
     }
 }

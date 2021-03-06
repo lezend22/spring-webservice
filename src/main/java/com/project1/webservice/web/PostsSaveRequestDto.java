@@ -15,16 +15,16 @@ public class PostsSaveRequestDto {
 
     private String product;
     private String price;
-    private String customerName;
+    private String name;
 
     public Posts toEntity(){
-        return Posts.builder().product(product).price(price).customerName(customerName).build();
+        return Posts.builder().product(product).price(price).name(name).build();
     }
 
     @Builder
-    public PostsSaveRequestDto(String product, String price, String customerName) {
+    public PostsSaveRequestDto(String product, String price, String name) {
         this.product = product;
         this.price = price;
-        this.customerName = customerName;
+        this.name = name;
     }
 }
